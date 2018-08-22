@@ -1,0 +1,34 @@
+<%- partial('_partial/head') %>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <div class="outer">
+        <section id="main"><%- body %>
+          <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTE0Ni8xNTY3Mw==">
+            <script type="text/javascript">
+               (function(d, s) {
+                   var j, e = d.getElementsByTagName(s)[0];
+            
+                   if (typeof LivereTower === 'function') { return; }
+            
+                   j = d.createElement(s);
+                   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                   j.async = true;
+            
+                   e.parentNode.insertBefore(j, e);
+               })(document, 'script');
+            </script>
+            </div>
+        </section>
+        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        <% } %>
+      </div>
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    </div>
+    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/after-footer') %>
+  </div>
+</body>
+</html>

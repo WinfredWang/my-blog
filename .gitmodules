@@ -1,0 +1,6 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:WinfredWang/winfredwang.github.io.git
+[submodule "themes/snippetx"]
+	path = themes/snippetx
+	url = git@github.com:WinfredWang/hexo-theme-snippet.git
